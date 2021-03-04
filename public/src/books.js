@@ -30,7 +30,7 @@ function partitionBooksByBorrowedStatus(books) {
 }
 
 function getBorrowersForBook(book, accounts) {
-  booksies = []
+  booksies = [];
   accounts.forEach((acc) => {
     book.borrows.forEach((borrow) => {
       if(acc.id === borrow.id)
@@ -40,7 +40,8 @@ function getBorrowersForBook(book, accounts) {
     booksies.push(acc);
   }});
   booksies.length = 10;
-  return booksies;
+
+return booksies;
 }
 
 module.exports = {
